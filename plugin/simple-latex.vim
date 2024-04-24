@@ -1,3 +1,9 @@
+" Guard against multiple loading
+if exists('g:loaded_simplelatex')
+  finish
+endif
+let g:loaded_simplelatex = 1
+
 " Key mapping
 nnoremap <silent> <Leader>rl :call BuildAndOpenPDF()<CR>
 
